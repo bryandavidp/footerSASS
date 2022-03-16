@@ -1,0 +1,129 @@
+/* ********* */
+/* @VARIABLES */
+/* ********* */
+
+// Footer
+// Colores
+$color_footer_scLinks : #FFFFFF;
+$color_footer_scLogo : #F3F3FD;
+$color_footer_scTerminos : #C9CEEA;
+$color_footer_direccion : #6D73A1;
+
+$color__principal : #6D73A1;
+$color__secundario : #0C154E;
+$color__redes : #AFB3CD;
+$gris : #AFB3CD;
+
+$coloresLinks: (
+    titulos__link: #0C154E,
+    links: #6D73A1
+);
+
+// Tamaños
+$anchoMax : 1366px;
+
+
+
+
+
+
+/* ================================================ */
+/* EJEMPLOS DE SASS */
+/* ================================================ */
+
+$Lista: red, yellow, 20px, top, bottom;
+
+/* .caja{
+    background-color: nth($lista, 2);
+    position: absolute;
+    top: nth($lista, 3);
+} */
+
+// Tamaños titulos
+$titulos: (
+    //SEO
+    h1: 2rem, 
+    h2: 1.5rem,
+    h3: 1.25rem,
+    //NO ES SEO
+    h4: 1rem,
+    h5: 0.75rem,
+    h6: 0.5rem
+);
+
+// Listas anidadas
+$listaAnidada: ( red, Ferari), (yellow, Lamborghini), (green, Audi);
+
+@each $listaAnidada, $marca in $listaAnidada {
+    .marca-#{$marca} {
+        color: $color;
+    }
+}
+
+// Bucles de asignacion de colores
+
+$zonasColores: ("header", grey, black),
+                ("main", red, white),
+                ("footer", blue, white);
+
+@each $zona, $colorFondo, $colorTexto in $zonasColores {
+    .#{$zona} {
+        background-color: $colorFondo;
+        color: $colorTexto;
+    }
+}
+
+// =====================================
+// Mixin con FLEXBOX
+// =====================================
+
+@mixin cajaFlex($direccion, $horizontal, $vertical, $wrap:nowrap){
+
+    display: flex;
+    flex-direction: $direccion;
+    flex-wrap: $wrap;
+    justify-content: $horizontal;
+    align-items: $vertical;
+
+}
+
+header{
+    @include cajaFlex(row, space-between, center, nowrap);
+}
+
+// =====================================
+// 
+// =====================================
+
+$listaColores: red, yellow, green, blue, black, white;
+
+//Bucle
+@each $color in $listaColores {
+    .color-#{$color} {
+        color: $color;
+    }
+}
+
+// =====================================
+// ICONOES
+// =====================================
+
+$listaIconos: (twitter, "../RUTA", blue),
+                (facebook, "../RUTA", blue),
+                (instagram, "../RUTA", green);
+
+@each $icono, $ruta, $color in $listaIconos {
+    .icono-#{$icono} {
+        background-image: url($ruta);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 35px;
+        height: 35px;
+        color: $color;
+    }
+}
+
+
+
+

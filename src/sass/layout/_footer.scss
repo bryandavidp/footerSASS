@@ -1,0 +1,215 @@
+/* ********* */
+/* @FOOTER */
+/* ********* */
+
+
+// Colores
+.links {
+  background-color: $color_footer_scLinks;
+}
+.logoIdiomas {
+  background-color: $color_footer_scLogo;
+}
+.terminosSocial {
+  background-color: $color_footer_scTerminos;
+}
+
+// Margenes, espacio
+.links {
+  &__contenido {
+    padding: 5.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+.seccion__enlaces{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    .titulo__enlaces{
+        color: map-get($coloresLinks, titulos__link);
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .enlaces{
+        color: map-get($coloresLinks, links);
+        font-size: 1.1rem;
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.enlace{
+
+    padding: 8px 0;
+
+    a{
+        color: map-get($coloresLinks, links);
+        font-size: 1rem;
+        text-decoration: none;
+
+    }
+
+}
+
+.tiendas{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+    .tienda{
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+
+.logoIdiomas {
+  &__contenido {
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img{
+        width: 60px;
+        height: 60px;
+        padding: 0px 20px 0 0;
+    }
+  }
+
+  &__texto{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+      color: $color_footer_direccion;
+    }
+
+    &__idiomas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+
+        select{
+            width: 150px;
+            height: 30px;
+            border: 1px solid lighten($color__principal, 30%);
+            border-radius: 5px;
+            margin: 0;
+            font-size: smaller;
+            padding-right: 5px;
+            padding-left: 5px;
+            color: map-get($coloresLinks , titulos__link);
+
+        }
+    }
+
+}
+
+
+
+
+
+.terminosSocial {
+  &__contenido {
+    padding: 1rem 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  }
+
+  &__terminos{
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+      color: $color_footer_direccion;
+      align-items: center;
+
+      div{
+          width: 1px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0;
+          margin: 0 10px;
+          height: 30px;
+          background-color: $gris;
+      }
+  }
+
+    &__social{
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .redesSociales{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: $color__redes;
+
+            .redSocial{
+
+
+                a{
+
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        padding: 0;
+                        margin: 0;
+                        color: $color_footer_direccion;
+
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+.centrar {
+  max-width: $anchoMax;
+  margin: 0 auto;
+}
